@@ -1,0 +1,3 @@
+# Only ignore service account keys
+service-account.json
+
