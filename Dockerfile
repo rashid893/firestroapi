@@ -24,7 +24,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose port for Cloud Run
-EXPOSE 8000
+EXPOSE 8080
 
 # Set environment variable for Django
 ENV DJANGO_SETTINGS_MODULE=myproject.settings
