@@ -1,3 +1,6 @@
-Django==6.0
-google-cloud-firestore==3.13.1
-gunicorn==21.2.0
+# Django==6.0
+# google-cloud-firestore==3.13.1
+# gunicorn==21.2.0
+Django==4.2.11
+gunicorn
+google-cloud-firestore
