@@ -18,7 +18,7 @@ COPY . .
 ENV DJANGO_SETTINGS_MODULE=myproject.settings
 
 # Cloud Run port (informational only)
-EXPOSE 8080
+EXPOSE 8000
 
 # 🔥 IMPORTANT: use $PORT and 0.0.0.0
 CMD ["sh", "-c", "python manage.py runserver 0.0.0.0:$PORT"]
