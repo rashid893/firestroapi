@@ -17,4 +17,4 @@ COPY . .
 
 ENV DJANGO_SETTINGS_MODULE=myproject.settings
 
-CMD ["sh", "-c", "gunicorn myproject.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 0"]
+CMD ["sh", "-c", "gunicorn gcpfirestor.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 0"]
