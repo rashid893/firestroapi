@@ -17,8 +17,4 @@ COPY . .
 
 ENV DJANGO_SETTINGS_MODULE=myproject.settings
 
-# EXPOSE is optional; Cloud Run ignores it
-EXPOSE 8000
-
-# 🔥 THIS LINE IS THE FIX
-CMD ["sh", "-c", "python manage.py runserver 0.0.0.0:$PORT"]
+CMD ["sh", "-c", "gunicorn myproject.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 0"]
