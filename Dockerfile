@@ -15,6 +15,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV DJANGO_SETTINGS_MODULE=myproject.settings
+ENV DJANGO_SETTINGS_MODULE=gcpfirestor.settings
 
 CMD ["sh", "-c", "gunicorn gcpfirestor.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 0"]
